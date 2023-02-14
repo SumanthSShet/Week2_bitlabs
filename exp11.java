@@ -1,15 +1,16 @@
 import java.util.Scanner;
-class Main11 {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    
-    System.out.print("Enter your age: ");
-    int age = scanner.nextInt();
-    
-    if (age >= 18) {
-      System.out.println("You are eligible for voting.");
-    } else {
-      System.out.println("You are not eligible for voting.");
+
+public class NumberOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        int count = 0;
+        while (num != 0) {
+            num /= 10;
+            count++;
+        }
+        System.out.println("The number of digits in the given number is " + count);
     }
-  }
 }

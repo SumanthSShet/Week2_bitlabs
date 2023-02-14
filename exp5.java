@@ -1,27 +1,21 @@
 import java.util.Scanner;
 
-class Main {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    
-    System.out.print("Enter salary: ");
-    float salary = scanner.nextFloat();
-    
-    System.out.print("Enter bill amount for shopping 1: ");
-    float bill1 = scanner.nextFloat();
-    
-    System.out.print("Enter bill amount for shopping 2: ");
-    float bill2 = scanner.nextFloat();
-    
-    System.out.print("Enter bill amount for shopping 3: ");
-    float bill3 = scanner.nextFloat();
-    
-    float totalShoppingAmount = bill1 + bill2 + bill3;
-    float percentage = (totalShoppingAmount / salary) * 100;
-    
-    System.out.println("Total shopping amount: " + totalShoppingAmount);
-    System.out.println("Percentage of salary spent on shopping: " + percentage + "%");
-  }
-}
+class SumOfEvenAndOdd {
+    public static void main(String[] args) {
+        int n, i, evenSum = 0, oddSum = 0;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the value of n: ");
+        n = scanner.nextInt();
 
-    
+        for (i = 1; i <= n; i++) {
+            if (i % 2 == 0) {
+                evenSum += i;
+            } else {
+                oddSum += i;
+            }
+        }
+
+        System.out.println("Sum of even numbers between 1 and " + n + " is: " + evenSum);
+        System.out.println("Sum of odd numbers between 1 and " + n + " is: " + oddSum);
+    }
+}

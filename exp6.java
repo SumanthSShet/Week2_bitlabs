@@ -1,15 +1,21 @@
+//1. WAP to find factors of a given number 
 import java.util.Scanner;
- class Main6 {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
+ 
+class Example1 {
+  public static void main(String args[]) {
+ 
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter number to find factors");
+    int num=s.nextInt();   // 50  --> 25       1- num/2
+ 
+    for(int i=1;i<=num/2;i++){
+      if(num%i==0){      // 50/25
+        System.out.println(i);
+      }
+    }
     
-    System.out.print("Enter first value: ");
-    int value1 = scanner.nextInt();
     
-    System.out.print("Enter second value: ");
-    int value2 = scanner.nextInt();
-    
-    int sum = value1 + value2;
-    System.out.println("Sum: " + sum);
   }
 }
+
+

@@ -1,9 +1,10 @@
-class Example1{
+//1-10
+class Example1 {
+  public static void main(String args[]) {
  
-  public static void main(String args[]){
+    for (int i = 1; i <= 10; i++) {
+      System.out.print(i + " ");
+    }
  
-      System.out.println("welcome to Java");
-    
   }
-  
 }

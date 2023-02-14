@@ -1,37 +1,23 @@
 import java.util.Scanner;
 
-class Main {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    
-    System.out.print("Enter week number (1-7): ");
-    int weekNumber = scanner.nextInt();
-    
-    switch (weekNumber) {
-      case 1:
-        System.out.println("Sunday");
-        break;
-      case 2:
-        System.out.println("Monday");
-        break;
-      case 3:
-        System.out.println("Tuesday");
-        break;
-      case 4:
-        System.out.println("Wednesday");
-        break;
-      case 5:
-        System.out.println("Thursday");
-        break;
-      case 6:
-        System.out.println("Friday");
-        break;
-      case 7:
-        System.out.println("Saturday");
-        break;
-      default:
-        System.out.println("Invalid week number.");
-        break;
+public class EvenOddDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        int evenCount = 0, oddCount = 0;
+        while (num != 0) {
+            int digit = num % 10;
+            if (digit % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+            num /= 10;
+        }
+
+        System.out.println("The number of even digits in the given number is " + evenCount);
+        System.out.println("The number of odd digits in the given number is " + oddCount);
     }
-  }
 }

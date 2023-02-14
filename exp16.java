@@ -1,26 +1,22 @@
 import java.util.Scanner;
-
-public class LeapYear {
+class PalindromeNumber {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the year: ");
-        int year = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number");
+        int num = scanner.nextInt();
 
-        boolean isLeap = false;
-        if (year % 400 == 0) {
-            isLeap = true;
-        } else if (year % 100 == 0) {
-            isLeap = false;
-        } else if (year % 4 == 0) {
-            isLeap = true;
-        } else {
-            isLeap = false;
+        int reversed = 0, original = num;
+        while (num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /=10;
         }
-
-        if (isLeap) {
-            System.out.println(year + " is a leap year");
-        } else {
-            System.out.println(year + " is not a leap year");
-        }
+      if(original == reversed){
+        System.out.println("the given number is a palindrome");
+      }else{
+        System.out.println("the given number is not a palindrome");
+      }
     }
 }
+        
+    

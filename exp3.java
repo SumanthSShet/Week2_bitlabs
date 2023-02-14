@@ -1,32 +1,20 @@
-class PrimitiveDataTypes {
-  public static void main(String[] args) {
-   
-    byte byteValue = 9;
-    System.out.println("byte value is :" + byteValue);
-    
-    short shortValue = 23;
-    System.out.println("short value is: " + shortValue);
-
-    int intValue = 100;
-    System.out.println("int value is: " + intValue);
-
-    long longValue = 7890;
-    System.out.println("long value is: " + longValue);
-
-    float floatValue = 12.5f;
-    System.out.println("float value is: " + floatValue);
-
-    double doubleValue = 45.67;
-    System.out.println("double value is: " + doubleValue);
-
-    boolean booleanValue = true;
-    System.out.println("boolean value is: " + booleanValue);
-
-    char charValue = 'S';
-    System.out.println("char value is: " + charValue);
-
-    String stringValue="hello world";
-    System.out.println("string value is"+stringValue
-                      );
+/*
+  2*1=2
+2*2=4
+2*3=6
+  */
+ 
+import java.util.Scanner;
+ 
+class Example1 {
+  public static void main(String args[]) {
+ 
+    Scanner s = new Scanner(System.in);
+    System.out.println("Enter your number to print a table");
+    int num = s.nextInt(); // 3 5
+ 
+    for (int i = 1; i <= 10; i++) {
+      System.out.println(num + " * " + i + " =" + (num * i));
+    }
   }
 }
